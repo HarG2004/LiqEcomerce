@@ -1,0 +1,17 @@
+release/account.o
+release/customer.o
+release/customerlogin.o
+release/customertable.o
+release/database.o
+release/main.o
+release/mainwindow.o
+release/managerlogin.o
+release/order.o
+release/ordertable.o
+release/product.o
+release/productlist.o
+release/producttable.o
+release/register.o
+release/shoppingcart.o
+release/table.o
+release/moc_mainwindow.o

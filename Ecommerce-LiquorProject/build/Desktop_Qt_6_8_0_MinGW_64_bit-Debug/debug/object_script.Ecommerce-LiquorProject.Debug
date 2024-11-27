@@ -1,0 +1,17 @@
+debug/account.o
+debug/customer.o
+debug/customerlogin.o
+debug/customertable.o
+debug/database.o
+debug/main.o
+debug/mainwindow.o
+debug/managerlogin.o
+debug/order.o
+debug/ordertable.o
+debug/product.o
+debug/productlist.o
+debug/producttable.o
+debug/register.o
+debug/shoppingcart.o
+debug/table.o
+debug/moc_mainwindow.o
