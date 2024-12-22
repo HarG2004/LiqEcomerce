@@ -1,3 +1,4 @@
+debug/Testing.o
 debug/account.o
 debug/customer.o
 debug/customerlogin.o

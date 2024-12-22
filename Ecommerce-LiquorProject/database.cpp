@@ -11,7 +11,7 @@ Database::Database() {
 
     // Create database.
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("LiqEcomWebsite.db");
+    db.setDatabaseName("C:/Users/Harjap/LiqEcomWebsite.db");
 
     // Open databse.
     if (!db.open()) {

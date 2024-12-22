@@ -3,7 +3,7 @@
 // Method to create a customer object and get its attributes.
 
 // COnstructor will assign the parameters to its private variables.
-Customer::Customer(QString nameP, int lLnum, int expiry, QString adrs, int card, int id, QString user, QString pass) {
+Customer::Customer(QString nameP, int lLnum, int expiry, QString adrs, QString card, int id, QString user, QString pass) {
     name = nameP;
     liquorLicenseNum = lLnum;
     llExpDate = expiry;
@@ -35,7 +35,7 @@ QString Customer::getBusinessAdrs() {
 }
 
 // Getter for creditCardInfo
-int Customer::getCreditCardInfo() {
+QString Customer::getCreditCardInfo() {
     return creditCardInfo;
 }
 

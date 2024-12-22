@@ -11,7 +11,7 @@ private:
     int liquorLicenseNum;    // Liquor license number
     int llExpDate;           // Liquor license expiry date
     QString businessAdrs;        // Business address
-    int creditCardInfo;      // Credit card information
+    QString creditCardInfo;      // Credit card information
     int customerID;          // Customer ID
     QString username;            // Username for login
     QString password;            // Password for login
@@ -19,14 +19,14 @@ private:
 public:
 
     // Constructor to initialize Customer object.
-    Customer(QString nameP, int lLnum, int expiry, QString adrs, int card, int id, QString user, QString pass);
+    Customer(QString nameP, int lLnum, int expiry, QString adrs, QString card, int id, QString user, QString pass);
 
     // Getters for all private variables of Customer.
     QString getName();
     int getLiquorLicenseNum();
     int getLLExpDate();
     QString getBusinessAdrs();
-    int getCreditCardInfo();
+    QString getCreditCardInfo();
     int getCustomerID();
     QString getUsername();
     QString getPassword();

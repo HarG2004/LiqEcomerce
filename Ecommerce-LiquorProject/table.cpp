@@ -3,7 +3,7 @@
 // Class to manage tables.
 
 // Method to edit an entry in the database.
-bool edit(QString query){
+bool Table::edit(QString query){
 
     // Get database connection.
     QSqlQuery sqlQuery(Database::getInstance()->getConnection());
@@ -17,7 +17,7 @@ bool edit(QString query){
 }
 
 // Method to remove an entry from the database.
-bool remove(QString query){
+bool Table::remove(QString query){
 
     // Get database connection.
     QSqlQuery sqlQuery(Database::getInstance()->getConnection());
@@ -32,7 +32,7 @@ bool remove(QString query){
 
 /* Method to see if there is an entry that matches the query in the table
  */
-bool search(QString query){
+bool Table::search(QString query){
 
     // Get database connection.
     QSqlQuery sqlQuery(Database::getInstance()->getConnection());

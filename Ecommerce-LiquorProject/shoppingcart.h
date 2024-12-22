@@ -12,7 +12,7 @@ private:
     std::map<int, std::pair<Product, int>> shoppingCart; // ProductId as key, pair<Product, quantity> as value
 public:
     // Method to add a product or increase its quantity.
-    bool addProduct(int productId, Product item, int qt);
+    bool addProduct(Product item, int qt);
 
     // Method to remove a product or reduce its quantity.
     bool removeProduct(int productId, int qt);

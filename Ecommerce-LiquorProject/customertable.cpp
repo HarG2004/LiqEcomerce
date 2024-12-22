@@ -14,7 +14,7 @@ void CustomerTable::createTable(){
                 LiquorLicenseNum INTEGER NOT NULL,
                 LLExpDate INTEGER NOT NULL,
                 BusinessAdrs TEXT NOT NULL,
-                CreditCardInfo INTEGER NOT NULL,
+                CreditCardInfo TEXT NOT NULL,
                 Username TEXT NOT NULL,
                 Password TEXT NOT NULL
             )
@@ -29,7 +29,7 @@ void CustomerTable::createTable(){
 }
 
 // Method to add a customer to the table.
-bool CustomerTable::addCustomer(int lLnum, int expiryDate, QString busAdrs, QString name, int cardInfo, QString username, QString password) {
+bool CustomerTable::addCustomer(int lLnum, int expiryDate, QString busAdrs, QString name, QString cardInfo, QString username, QString password) {
 
     // Get query.
     QSqlQuery query;
@@ -72,7 +72,7 @@ std::optional<Customer> CustomerTable::getCustomer(QString qStr) {
         int liquorLicenseNum = query.value("LiquorLicenseNum").toInt();
         int llExpDate = query.value("LLExpDate").toInt();
         QString businessAdrs = query.value("BusinessAdrs").toString();
-        int creditCardInfo = query.value("CreditCardInfo").toInt();
+        QString creditCardInfo = query.value("CreditCardInfo").toString();
         int customerID = query.value("CustomerID").toInt();
         QString username = query.value("Username").toString();
         QString password = query.value("Password").toString();

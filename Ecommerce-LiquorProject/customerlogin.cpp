@@ -16,7 +16,7 @@ bool customerLogin::authenticate() {
     CustomerTable customerTable;
 
     // Create query to search for the customer logging in with given username and passowrd.
-    QString query = QString("SELECT * FROM Customers WHERE Name = '%1' AND Password = '%2'")
+    QString query = QString("SELECT * FROM Customers WHERE Username = '%1' AND Password = '%2'")
     .arg(username, password);
 
     // Execute the query.

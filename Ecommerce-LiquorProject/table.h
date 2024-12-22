@@ -9,9 +9,9 @@ class Table
 public:
 
     // Methods to edit, remove, or confirm entries in the database.
-    bool edit(QString query);
-    bool remove(QString query);
-    bool search(QString query);
+    virtual bool edit(QString query);
+    virtual bool remove(QString query);
+    virtual bool search(QString query);
 
 protected:
 

@@ -16,6 +16,7 @@ private:
     int productId;
 public:
 
+    Product();
     // COnstructor to initialize all Product attributes.
     Product(QString nameP, QString brandP, QString typeP, QString sizeP, double priceP, int idP);
 

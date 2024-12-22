@@ -1,3 +1,4 @@
+release/Testing.o
 release/account.o
 release/customer.o
 release/customerlogin.o

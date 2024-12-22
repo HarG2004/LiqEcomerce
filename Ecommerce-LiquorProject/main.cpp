@@ -1,16 +1,11 @@
 #include "mainwindow.h"
-
+#include <QCoreApplication>
 #include <QApplication>
 #include "Database.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-
-    Database* dbManager = Database::getInstance();
-
-    // Use the database connection
-    QSqlDatabase& db = dbManager->getConnection();
-    QSqlQuery query(db);
-    return 0;
+    MainWindow w;
+    w.show();  // Displays the main window
+    return a.exec();
 }

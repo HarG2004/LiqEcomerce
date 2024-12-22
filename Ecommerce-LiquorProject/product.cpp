@@ -1,6 +1,7 @@
 #include "product.h"
 
 // CLass to create a product and get its attributes.
+Product::Product() : productName(""), brand(""), type(""),size(""), price(0.0), productId(0) {}
 
 // Constructor to initialize attributes with paramters.
 Product::Product(QString nameP, QString brandP, QString typeP, QString sizeP, double priceP, int idP) {

@@ -1,4 +1,7 @@
 #include "productlist.h"
+#include <QCoreApplication>
+#include <QDebug>
+#include "database.h"
 
 // CLass to create and filter product lists as required by the system.
 
@@ -115,3 +118,4 @@ std::vector<Product> ProductList::SizeFilter(QString size){
     // Return the filtered list.
     return filteredList;
 }
+

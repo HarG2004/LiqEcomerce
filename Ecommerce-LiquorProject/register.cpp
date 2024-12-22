@@ -13,9 +13,16 @@ bool Register::isPasswordValid(QString password) {
 }
 
 // Validates credit card number (16 digits).
-bool Register::isCreditCardValid(int creditCardNumber) {
-    int digits = QString::number(creditCardNumber).length();
-    return digits == 16;
+bool Register::isCreditCardValid(QString creditCardNumber) {
+    if (creditCardNumber.length() != 16) {
+        return false; // Must be exactly 16 digits
+    }
+    for (QChar ch : creditCardNumber) {
+        if (!ch.isDigit()) {
+            return false; // All characters must be digits
+        }
+    }
+    return true;
 }
 
 // Validates liquor license (10-12 digits).
@@ -55,6 +62,12 @@ bool Register::registerCustomer(Customer customer) {
 
     if (!isExpiryDateValid(customer.getLLExpDate())) {
         qDebug() << "Invalid expiry date. Must be greater than 2024 and less than 2100.";
+        return false;
+    }
+    QString query = QString("SELECT * FROM Customers WHERE Username = '%1'").arg(customer.getUsername());
+
+    if (customerTable.search(query)){
+        qDebug() << "Username already exists.";
         return false;
     }
 

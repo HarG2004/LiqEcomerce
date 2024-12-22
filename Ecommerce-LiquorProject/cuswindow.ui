@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>managerWindow</class>
+ <widget class="QMainWindow" name="managerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>483</width>
+    <height>312</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: black;
+    color: white;
+}
+/* Customize QPushButton specifically */
+QPushButton {
+    background-color: gray; /* A slightly lighter background for buttons */
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Customize QTabWidget */
+QTabWidget::pane {
+    background-color: black;
+    border: 1px solid white;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+QTabBar::tab {
+    background: gray;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+QTabBar::tab:selected {
+    background: white;
+    color: black;
+}
+
+QLineEdit {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 2px;
+}
+font: 900 italic 9pt &quot;Segoe UI&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Tabs">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>0</y>
+      <width>461</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="Cedit">
+     <attribute name="title">
+      <string>Cedit</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>211</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Component To Edit:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="eComponent">
+         <item>
+          <property name="text">
+           <string>Username</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LiquorLicenseNum</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LLExpDate</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BusinessAdrs</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CreditCardInfo</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>New Component Value:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="eNew"/>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+        <widget class="QPushButton" name="eEnter">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Enter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="eResult">
+         <property name="text">
+          <string>Result...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Cshop">
+     <attribute name="title">
+      <string>Cshop</string>
+     </attribute>
+     <widget class="QTableWidget" name="productTable">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>381</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="columnCount">
+       <number>10</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Brand</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Size</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Price</string>
+       </property>
+      </column>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+     <widget class="QSpinBox" name="quantity">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>42</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>-100</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>210</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Update Shopping Cart</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>37</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quantity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statusLabel">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>220</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Status</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Corders">
+     <attribute name="title">
+      <string>Corders</string>
+     </attribute>
+     <widget class="QTableWidget" name="oTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>361</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Subtotal</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tax</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Total</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Arrival</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Ccheckout">
+     <attribute name="title">
+      <string>Ccheckout</string>
+     </attribute>
+     <widget class="QTableWidget" name="cartTable">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>231</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Product</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Price</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>0</y>
+        <width>160</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Subtotal:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="sub">
+         <property name="text">
+          <string>In dollars.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tax">
+         <property name="text">
+          <string>Tax:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>In dollars.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Total:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="total">
+         <property name="text">
+          <string>In dollars.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="refreshButton">
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="oButton">
+         <property name="text">
+          <string>Order</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="checkResult">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result...</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>483</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEcomLiq">
+    <property name="title">
+     <string>EcomLiq</string>
+    </property>
+   </widget>
+   <addaction name="menuEcomLiq"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

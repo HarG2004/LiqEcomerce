@@ -1,0 +1,8 @@
+To make sure that the tests work fully you are going to have to make a main method in the testing class.
+Make sure that it has QCoreApplication in it so that everything works ok.
+Otherwise just a normal main method for google testing is alright.
+You will need an empty database for the tests to work and you need to run the tests twice so that all of them work.
+
+Otherwise just run main.cpp to start up the ui.
+Register you own user and play around with the features. I reccomend a database viewer for swlLite as that is the database I use.
+The database viewer helps confirms the changes to the database.
