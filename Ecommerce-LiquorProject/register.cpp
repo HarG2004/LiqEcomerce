@@ -28,7 +28,7 @@ bool Register::isCreditCardValid(QString creditCardNumber) {
 // Validates liquor license (10-12 digits).
 bool Register::isLiquorLicenseValid(int liquorLicenseNum) {
     int digits = QString::number(liquorLicenseNum).length();
-    return digits >= 10 && digits <= 12;
+    return (digits == 10);
 }
 
 // Validates expiry date (greater than 2024 and less than 2100).
@@ -56,7 +56,7 @@ bool Register::registerCustomer(Customer customer) {
     }
 
     if (!isLiquorLicenseValid(customer.getLiquorLicenseNum())) {
-        qDebug() << "Invalid liquor license number. Must be 10-12 digits.";
+        qDebug() << "Invalid liquor license number. Must be 10 digits.";
         return false;
     }
 

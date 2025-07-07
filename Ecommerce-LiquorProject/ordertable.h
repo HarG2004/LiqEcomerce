@@ -4,6 +4,7 @@
 #include <vector>
 #include <order.h>
 #include <table.h>
+#include <iostream>
 
 // Inherits Table
 class OrderTable : public Table

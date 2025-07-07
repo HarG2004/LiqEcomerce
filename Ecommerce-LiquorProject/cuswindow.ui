@@ -66,7 +66,7 @@ font: 900 italic 9pt &quot;Segoe UI&quot;;</string>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Cedit">
      <attribute name="title">
@@ -240,8 +240,8 @@ font: 900 italic 9pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>220</y>
+        <x>10</x>
+        <y>230</y>
         <width>37</width>
         <height>12</height>
        </rect>
@@ -279,7 +279,7 @@ font: 900 italic 9pt &quot;Segoe UI&quot;;</string>
       </property>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>OrderID</string>
        </property>
       </column>
       <column>

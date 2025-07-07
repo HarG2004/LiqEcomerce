@@ -22,6 +22,7 @@ managerWindow::managerWindow(int customerId, QWidget *parent)
     ProductList ls;
     list = ls.getProducts();
     populateTable();
+    oTable();
 
 }
 
@@ -114,27 +115,31 @@ void managerWindow::oTable() {
     // get order table
     OrderTable orderTable;
     auto ord = orderTable.getCustomerOrders(cusID);
+    auto& orders = ord.value();
 
-    std::vector<Order> ord2;
+    int ord2;
 
+    ord2 = orders.size();
     // check if customer has any orders.
-    if (ord.has_value()){
-        ord2 = ord.value();
-    }
-    else{
+    if (ord2 == 0){
         return;
     }
 
-    // create the table.
-    ui->oTable->setRowCount(ord2.size());
-    for (int i = 0; i < ord2.size(); ++i) {
+    qDebug() << ord2 << " ";
 
-        Order order = ord2[i];
-        ui->oTable->setItem(i, 0, new QTableWidgetItem(QString::number(order.getOrderID())));
-        ui->oTable->setItem(i, 1, new QTableWidgetItem(QString::number(order.getSubtotal())));
-        ui->oTable->setItem(i, 2, new QTableWidgetItem(QString::number(order.getTax())));
-        ui->oTable->setItem(i, 3, new QTableWidgetItem(QString::number(order.getTotal())));
-        ui->oTable->setItem(i, 4, new QTableWidgetItem(order.getArrivalDate()));
+    // create the table.
+    ui->oTable->setRowCount(ord2);
+    for (int i = 0; i < ord2; ++i) {
+
+        auto ord1 = orders.back();
+        qDebug() << ord1.getOrderID() << " ";
+        ui->oTable->setItem(i, 0, new QTableWidgetItem(QString::number(ord1.getOrderID())));
+        ui->oTable->setItem(i, 1, new QTableWidgetItem(QString::number(ord1.getSubtotal())));
+        ui->oTable->setItem(i, 2, new QTableWidgetItem(QString::number(ord1.getTax())));
+        ui->oTable->setItem(i, 3, new QTableWidgetItem(QString::number(ord1.getTotal())));
+        ui->oTable->setItem(i, 4, new QTableWidgetItem(ord1.getArrivalDate()));
+
+        orders.pop_back();
     }
 }
 

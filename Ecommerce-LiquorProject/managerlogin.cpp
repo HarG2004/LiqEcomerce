@@ -19,7 +19,7 @@ bool managerLogin::authenticate(){
     bool passCheck = (password == "SecretPassword");
     bool pass2Check = (secondPassword == "SuperSecretPassword");
 
-    // Return true if username and passwords are correct, flase if not.
+    // Return true if username and passwords are correct, false if not.
     if (nameCheck && passCheck && pass2Check){
         return true;
     }

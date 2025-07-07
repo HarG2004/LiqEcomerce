@@ -4,5 +4,25 @@ Otherwise just a normal main method for google testing is alright.
 You will need an empty database for the tests to work and you need to run the tests twice so that all of them work.
 
 Otherwise just run main.cpp to start up the ui.
+Sign in as a manager and add your own products.
 Register you own user and play around with the features. I reccomend a database viewer for swlLite as that is the database I use.
 The database viewer helps confirms the changes to the database.
+
+You need to sign in a manager first as customers will not be allowed to access the store when there are no products.
+
+Manager Sign In:
+Username : Manager
+Password : SecretPassword
+Second Password : SuperSecretPassword
+
+Requirments to register you own user:
+Username and password must both be atleast 6 characters.
+Credit card number must be 16 digits.
+Liquor liscense number must be 10 digits.
+Expiry date has to be greater than 2024 and less than 2100.
+Also the username cannot already be in the database.
+
+I used a few design patterns with the account, table, and database classes.
+Database used the singleton pattern to make sure there is only ever one instanse of a database connection.
+Account uses the template pattern so that all current and future accounts can login using the same method.
+Table also uses the template pattern to create a standard design all tables can follow. The tables refer to database tables.

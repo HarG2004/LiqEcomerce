@@ -193,7 +193,7 @@ public:
         update->setGeometry(QRect(150, 210, 141, 18));
         label_3 = new QLabel(Cshop);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(30, 220, 37, 12));
+        label_3->setGeometry(QRect(10, 230, 37, 12));
         statusLabel = new QLabel(Cshop);
         statusLabel->setObjectName("statusLabel");
         statusLabel->setGeometry(QRect(310, 220, 151, 16));
@@ -295,7 +295,7 @@ public:
 
         retranslateUi(managerWindow);
 
-        Tabs->setCurrentIndex(2);
+        Tabs->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(managerWindow);
@@ -332,7 +332,7 @@ public:
         statusLabel->setText(QCoreApplication::translate("managerWindow", "Status", nullptr));
         Tabs->setTabText(Tabs->indexOf(Cshop), QCoreApplication::translate("managerWindow", "Cshop", nullptr));
         QTableWidgetItem *___qtablewidgetitem5 = oTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("managerWindow", "New Column", nullptr));
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("managerWindow", "OrderID", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = oTable->horizontalHeaderItem(1);
         ___qtablewidgetitem6->setText(QCoreApplication::translate("managerWindow", "Subtotal", nullptr));
         QTableWidgetItem *___qtablewidgetitem7 = oTable->horizontalHeaderItem(2);

@@ -1,4 +1,7 @@
 #include "ordertable.h"
+#include <QCoreApplication>
+
+
 
 // Class to create and manage an order table.
 void OrderTable::createTable() {
@@ -88,3 +91,34 @@ std::optional<std::vector<Order>> OrderTable::getCustomerOrders(int customerID) 
     }
     return orders; // Return vector if it is not empty.
 }
+
+// For testing purposes.
+/**int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+    Database* db;
+    OrderTable orderTable;
+
+    db = Database::getInstance();
+    orderTable.createTable();
+
+    auto ordersOpt = orderTable.getCustomerOrders(96);
+
+    if (ordersOpt.has_value()) {
+        auto& orders = ordersOpt.value();
+        qDebug() << "Orders found:" << orders.front().getCustomerID();
+        qDebug() << orders.back().getOrderID() << " ";
+        orders.pop_back();
+        qDebug() << orders.back().getOrderID() << " ";
+        orders.pop_back();
+        for (auto it = begin (orders); it != end (orders); ++it) {
+            std::cout << orders.back().getOrderID() << " ";
+            orders.pop_back();
+        }
+    } else {
+        std::cout << "No orders found for customer." << std::endl;
+    }
+
+    return a.exec();
+}
+*/

@@ -13,7 +13,6 @@
 #include <managerlogin.h>
 
 // Here are my tests. They should all work fine though productList tests might need to be run twice to work.
-// I don't know why. Mocking also didn't work for me, but Ive checked and everything should work.
 // I also used a database viewer to look at my database entries and check that they were correct.
 // You will also have to have an empty database to employ these tests.
 
@@ -367,3 +366,10 @@ TEST(ShoppingCartTest, CalculatePriceSummary) {
     EXPECT_DOUBLE_EQ(total, 96.05);     // 85.0 + 11.05
 }
 
+// For testing purposes.
+/**int main(int argc, char *argv[]) {
+    QCoreApplication a(argc, argv);
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+*/
